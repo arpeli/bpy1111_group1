@@ -1,19 +1,20 @@
 ﻿# Project for BPY 1111: Physics for Computing Systems
 
 ## Group Members
-- Ariel Boutcher BSCCS/2025/40350
-- Loise Wambui BSCCS/2025/40219
-- Grace Wanjiru BSCCS/2025
-- Fridah Harawo
-- Rose Materta
-- Finley Motari
-- Joshua Samuel
-- Benie Macharia
-- Derrick Mburu
+- Ariel Boutcher -BSCCS/2025/40350
+- Loise Wambui - BSCCS/2025/40219
+- Grace Wanjiru -BSCCS/2025/39629
+- Fridah Harawo -BSCCS/2025/35619
+- Rose Materta - BSCCS/2025/39761
+- Finley Motari - BSCCS/2025/39262
+- Joshua Samuel - BSCCS/2025/40065
+- Benie Macharia - BSCCS/2025/39532
+- Derrick Mburu - BSCCS/2025/40404
+- Brillian Andalo - BSCCS/2025/41447
 
-## 🚗 Automated 2-Slot Parking System (Arduino + Tinkercad Simulation)
+## Automated 2-Slot Parking System (Arduino + Tinkercad Simulation)
 
-### 📘 Overview
+### Overview
 This project simulates an **automated 2-slot parking system** using an **Arduino UNO** in **Tinkercad Circuits**.  
 It demonstrates how parking systems can automatically detect vehicles, control a gate barrier, and indicate parking availability using simple electronic components.
 
@@ -21,7 +22,7 @@ The system uses **ultrasonic sensors** to detect approaching cars and monitor sl
 
 ---
 
-### 🧩 Components Used
+### Components Used
 | Component | Quantity | Description |
 |------------|-----------|-------------|
 | Arduino UNO R3 | 1 | Main microcontroller |
@@ -35,7 +36,7 @@ The system uses **ultrasonic sensors** to detect approaching cars and monitor sl
 
 ---
 
-### ⚙️ System Working Principle
+### System Working Principle
 1. **Vehicle Detection at Entry:**  
    When a car approaches the gate, the **entry ultrasonic sensor** measures a small distance (e.g., under 10 cm).  
    The system interprets this as a vehicle arrival and **opens the servo gate** automatically.
@@ -60,7 +61,7 @@ The system uses **ultrasonic sensors** to detect approaching cars and monitor sl
 
 ---
 
-### 🧠 Code Explanation (Summary)
+### Code Explanation
 
 The Arduino sketch is divided into the following key sections:
 
@@ -102,7 +103,7 @@ The Arduino sketch is divided into the following key sections:
 
 ---
 
-### 🧰 Circuit Connections
+### Circuit Connections
 
 | Function | Arduino Pin | Component |
 |-----------|--------------|------------|
@@ -124,7 +125,7 @@ The Arduino sketch is divided into the following key sections:
 
 ---
 
-### 🧪 Simulation Instructions
+### Simulation Instructions
 1. Open [Tinkercad Circuits](https://www.tinkercad.com/circuits).  
 2. Create a **New Circuit** and add the components listed above.  
 3. Wire them according to the connection table.  
@@ -134,7 +135,7 @@ The Arduino sketch is divided into the following key sections:
 
 ---
 
-### 📊 Expected Behavior
+### Expected Behavior
 | Scenario | Gate | Slot 1 LED | Slot 2 LED |
 |-----------|------|-------------|-------------|
 | No car | Closed | Green ON | Green ON |
@@ -146,7 +147,7 @@ The Arduino sketch is divided into the following key sections:
 
 ---
 
-### 🧩 Applications
+### Applications
 - Smart parking systems  
 - Garage automation demonstrations  
 - IoT-based vehicle monitoring (with extensions)  
@@ -154,7 +155,7 @@ The Arduino sketch is divided into the following key sections:
 
 ---
 
-### 🚀 Future Improvements
+### Future Improvements
 - Add an LCD display to show live slot status (e.g., “Slot 1: Occupied”).  
 - Integrate RFID for secure access control.  
 - Connect to IoT dashboards (Blynk, ThingSpeak) for real-time monitoring.  
@@ -164,13 +165,13 @@ The Arduino sketch is divided into the following key sections:
 ---
 
 
-## 🚨 Motion Activated Security Light Circuit (Tinkercad)
+## Motion Activated Security Light Circuit (Tinkercad)
 
 This project demonstrates how to create a basic motion-activated security light using an **Arduino Uno** and a **PIR Motion Sensor** in the Tinkercad Circuits simulator. The LED light will turn on when motion is detected and stay on for a set duration of 5 seconds.
 
 -----
 
-### 1\. 📦 Required Components
+### 1\. Required Components
 
 The following virtual components are needed from the Tinkercad Circuits library:
 
@@ -182,7 +183,7 @@ The following virtual components are needed from the Tinkercad Circuits library:
 
 -----
 
-### 2\. 🔌 Circuit Assembly Instructions
+### 2\. Circuit Assembly Instructions
 
 The circuit is built on the small breadboard and connected to the Arduino Uno.
 
@@ -215,7 +216,7 @@ The resistor is essential and must be connected in **series** with the LED to pr
 
 -----
 
-### 3\. 💾 Arduino Code (C++)
+### 3\. Arduino Code (C++)
 
 Use the "Text" code editor in Tinkercad and upload the following code. This program checks the state of the PIR sensor and controls the LED accordingly.
 
@@ -257,7 +258,7 @@ void loop() {
 
 -----
 
-### 4\. ▶️ Simulation and Testing
+### 4\. Simulation and Testing
 
 1.  Click the **"Start Simulation"** button.
 2.  **Click on the PIR Motion Sensor** component. This displays the motion detection field.
@@ -268,14 +269,14 @@ void loop() {
       * The LED will remain **ON** for **5 seconds** (due to the `delay(5000)` in the code), even if you immediately drag the circle out of the detection area.
       * After the delay, the LED will automatically turn **OFF**.
 
-### 👨‍💻 Author
+### Author
 **Group 1 Members**  
 Arduino and Embedded Systems Enthusiast  
 Project simulated using [Tinkercad Circuits](https://www.tinkercad.com/circuits)
 
 ---
 
-### 🏷️ License
+### License
 This project is open-source under the **MIT License**.  
 Feel free to modify and share with proper attribution.
 
