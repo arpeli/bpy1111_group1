@@ -3,6 +3,7 @@
 ## Group Members
 - Ariel Boutcher BSCCS/2025/40350
 - Loise Wambui BSCCS/2025/40219
+- Grace Wanjiru BSCCS/2025
 - Fridah Harawo
 - Rose Materta
 - Finley Motari
