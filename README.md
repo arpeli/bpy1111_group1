@@ -163,6 +163,111 @@ The Arduino sketch is divided into the following key sections:
 
 ---
 
+
+## 🚨 Motion Activated Security Light Circuit (Tinkercad)
+
+This project demonstrates how to create a basic motion-activated security light using an **Arduino Uno** and a **PIR Motion Sensor** in the Tinkercad Circuits simulator. The LED light will turn on when motion is detected and stay on for a set duration of 5 seconds.
+
+-----
+
+### 1\. 📦 Required Components
+
+The following virtual components are needed from the Tinkercad Circuits library:
+
+  * **1x Arduino Uno R3** (Microcontroller)
+  * **1x Breadboard** (Small)
+  * **1x PIR Motion Sensor** (Input)
+  * **1x LED** (Output, any color)
+  * **1x Resistor** ($220\Omega$) (Current Limiter for the LED)
+
+-----
+
+### 2\. 🔌 Circuit Assembly Instructions
+
+The circuit is built on the small breadboard and connected to the Arduino Uno.
+
+#### Power Connections
+
+| Arduino Pin | Breadboard Rail | Function |
+| :--- | :--- | :--- |
+| **5V** | Positive Rail (+) | Provides power to the breadboard. |
+| **GND** | Negative Rail (-) | Provides ground reference. |
+
+#### PIR Motion Sensor Connections
+
+The PIR sensor has three pins: VCC (Power), OUT (Signal), and GND (Ground).
+
+| PIR Pin | Connection Point | Function |
+| :--- | :--- | :--- |
+| **VCC** | Positive Rail (+) | Power supply. |
+| **GND** | Negative Rail (-) | Ground connection. |
+| **OUT** | **Arduino Digital Pin 2** | Sends the motion signal (HIGH or LOW) to the Arduino. |
+
+#### LED and Resistor Connections
+
+The resistor is essential and must be connected in **series** with the LED to prevent it from blowing out due to excessive current.
+
+| Component Pin | Connection Point | Function |
+| :--- | :--- | :--- |
+| **LED Cathode** (Shorter Leg) | Negative Rail (-) | Connects the LED to ground. |
+| **LED Anode** (Longer Leg) | One end of the Resistor | Connects the LED to the resistor. |
+| **Resistor** (Other End) | **Arduino Digital Pin 13** | Receives the signal (power) from the Arduino. |
+
+-----
+
+### 3\. 💾 Arduino Code (C++)
+
+Use the "Text" code editor in Tinkercad and upload the following code. This program checks the state of the PIR sensor and controls the LED accordingly.
+
+```cpp
+int pirPin = 2;    // Digital pin connected to PIR Sensor's OUT pin
+int ledPin = 13;   // Digital pin connected to the LED
+
+void setup() {
+  pinMode(pirPin, INPUT);   // Configure the PIR pin to read data
+  pinMode(ledPin, OUTPUT);  // Configure the LED pin to send data/power
+  Serial.begin(9600);       // Initialize serial communication for monitoring
+}
+
+void loop() {
+  int motionStatus = digitalRead(pirPin); // Read the state of Pin 2
+
+  if (motionStatus == HIGH) {
+    // Motion detected
+    digitalWrite(ledPin, HIGH); // Turn the LED ON
+    Serial.println("Motion detected! Light ON.");
+    
+    // IMPORTANT: This delay keeps the light on for 5 seconds.
+    // The loop pauses here, then forces the LED OFF at the end of the block 
+    // to ensure the light doesn't stay on indefinitely if motion persists.
+    delay(5000); 
+    digitalWrite(ledPin, LOW); // Force the LED OFF after the delay
+  } 
+  
+  // Note: If the delay above is removed, the 'else' logic is often needed:
+  /*
+  else {
+    // No motion detected, but the delay above handles turning it off 
+    // even if motion stops instantly.
+    digitalWrite(ledPin, LOW);  
+  }
+  */
+}
+```
+
+-----
+
+### 4\. ▶️ Simulation and Testing
+
+1.  Click the **"Start Simulation"** button.
+2.  **Click on the PIR Motion Sensor** component. This displays the motion detection field.
+3.  **Simulate Motion:** **Click and drag the small circle** that appears within the detection area.
+4.  **Observation:**
+      * The LED will immediately turn **ON**.
+      * The **Serial Monitor** (open it during simulation) will print `"Motion detected! Light ON."`.
+      * The LED will remain **ON** for **5 seconds** (due to the `delay(5000)` in the code), even if you immediately drag the circle out of the detection area.
+      * After the delay, the LED will automatically turn **OFF**.
+
 ### 👨‍💻 Author
 **Group 1 Members**  
 Arduino and Embedded Systems Enthusiast  
