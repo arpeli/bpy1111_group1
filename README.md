@@ -36,6 +36,13 @@ The system uses **ultrasonic sensors** to detect approaching cars and monitor sl
 
 ---
 
+### Schematics
+![Schematics for the Automated Gate and parking notifier](./smart_gate_and_parking.jpeg)
+
+PDF if provided in the files for better viewing.
+
+---
+
 ### System Working Principle
 1. **Vehicle Detection at Entry:**  
    When a car approaches the gate, the **entry ultrasonic sensor** measures a small distance (e.g., under 10 cm).  
@@ -182,7 +189,11 @@ The following virtual components are needed from the Tinkercad Circuits library:
   * **1x Resistor** ($220\Omega$) (Current Limiter for the LED)
 
 -----
+### Schematics
+![Schematics for Motion Activated Security Light](./motion_activated_light.jpeg)
+PDF provided with files for easier viewing
 
+-----
 ### 2\. Circuit Assembly Instructions
 
 The circuit is built on the small breadboard and connected to the Arduino Uno.
