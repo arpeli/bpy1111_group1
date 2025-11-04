@@ -5,7 +5,7 @@
 - Loise Wambui - BSCCS/2025/40219
 - Grace Wanjiru -BSCCS/2025/39629
 - Fridah Harawo -BSCCS/2025/35619
-- Rose Materta - BSCCS/2025/39761
+- Rose Mateta - BSCCS/2025/39761
 - Finley Motari - BSCCS/2025/39262
 - Joshua Samuel - BSCCS/2025/40065
 - Benie Macharia - BSCCS/2025/39532
