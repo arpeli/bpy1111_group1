@@ -1,6 +1,10 @@
 /*
 Code for the Automatic Gate System and Parking notifier.
 Written by GROUP 1 for BPY 1111: PHYSICS FOR COMPUTING SYSTEMS
+
+
+This code uses an ultrasonic sensor to detect the presence of a car at the gate and in two parking slots.
+The gate opens when a car approaches, and LEDs indicate whether each parking slot is occupied.
 */
 
 #include <Servo.h>
@@ -8,12 +12,13 @@ Written by GROUP 1 for BPY 1111: PHYSICS FOR COMPUTING SYSTEMS
 Servo gateServo;
 
 // Ultrasonic pins
-const int trigEntry = 2;
-const int echoEntry = 3;
-const int trigSlot1 = 4;
-const int echoSlot1 = 5;
-const int trigSlot2 = 6;
-const int echoSlot2 = 7;
+const int trigEntry = 2; // Trigger pin for entry sensor
+const int echoEntry = 3; // Echo pin for entry sensor
+// Ultrasonic pins for parking slots
+const int trigSlot1 = 4; // Trigger pin for slot 1 sensor
+const int echoSlot1 = 5; // Echo pin for slot 1 sensor
+const int trigSlot2 = 6; // Trigger pin for slot 2 sensor
+const int echoSlot2 = 7; // Echo pin for slot 2 sensor
 
 // LEDs
 const int led1Green = 8;
