@@ -1,3 +1,4 @@
+/* code for motion activated street lights*/
 int pirPin = 2;    // Digital pin connected to PIR Sensor's OUT pin
 int ledPin = 13;   // Digital pin connected to the LED
 
