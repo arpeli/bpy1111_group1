@@ -4,7 +4,7 @@ Written by GROUP 1 for BPY 1111: PHYSICS FOR COMPUTING SYSTEMS
 
 
 This code uses an ultrasonic sensor to detect the presence of a car at the gate and in two parking slots.
-The gate opens when a car approaches, and LEDs indicate whether each parking slot is occupied.
+The gate opens when a car approaches, and LEDs indicate whether each parking slot is occupied by a vehicle.
 */
 
 #include <Servo.h>
