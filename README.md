@@ -282,7 +282,7 @@ void loop() {
 
 ### Author
 **Group 1 Members**  
-Arduino and Embedded Systems Enthusiast  
+Arduino and Embedded Systems Enthusiasts  
 Project simulated using [Tinkercad Circuits](https://www.tinkercad.com/circuits)
 
 ---
